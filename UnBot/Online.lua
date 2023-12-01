@@ -48,7 +48,7 @@ function UnBotShowOnlineFrame()
 	if (OnlineFrame.scrollFrame == nil) then
 		OnlineFrame.scrollFrame = _G["OnlineFrameListBox"];
 		if (OnlineFrame.scrollFrame == nil) then
-			DisplayInfomation("打开Online窗口失败。");
+			DisplayInfomation("Failed to open the Online window.");
 			return;
 		end
 	end
@@ -123,7 +123,7 @@ function UnBotCreateMemberBar(member, index, fromParent)
 	newFrame.index = index;
 	local height = newFrame:GetHeight() + 3;
 	newFrame:SetPoint("TOPLEFT", fromParent, "TOPLEFT", 10, (3 + (index - 1) * height) * (-1));
-	newFrame:SetText(string.format("|cffcc00cc%s|r    |cffffcc00%d 级|r", member[1], member[2]));
+	newFrame:SetText(string.format("|cffcc00cc%s|r    |cffffcc00%d class|r", member[1], member[2])); -- Needs correction
 	newFrame:Show();
 	return newFrame;
 end

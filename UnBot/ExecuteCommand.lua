@@ -32,15 +32,15 @@ function CommandShowStrategyFrame(index)
 	local isParty = UnitInParty("target");
 	local isRaid = UnitInRaid("target");
 	if (targetName == nil or targetName == "") then
-		DisplayInfomation("你当前没有选择目标。");
+		DisplayInfomation("You have no target.");
 		return;
 	end
 	if (not UnitIsPlayer("target")) then
-		DisplayInfomation("需要选择一个玩家机器人作为目标。");
+		DisplayInfomation("A bot needs to be targetted.");
 		return;
 	end
 	if (isParty == nil and isRaid == nil) then
-		DisplayInfomation("选择目标不在你的队伍中。");
+		DisplayInfomation("The target is not in your group.");
 		return;
 	end
 	-- if (not IsRealPartyLeader()) then
@@ -61,7 +61,7 @@ function CommandFriendsOnline(index)
 			end
 		end
 	else
-		DisplayInfomation("你当前没有好友。");
+		DisplayInfomation("You have no friends.");
 	end
 end
 
@@ -84,7 +84,7 @@ function CommandFriendsInvite(index)
 			end
 		end
 	else
-		DisplayInfomation("你当前没有好友。");
+		DisplayInfomation("You have no friends.");
 	end
 end
 
@@ -100,15 +100,15 @@ function CommandInspectFrame(index)
 	local isParty = UnitInParty("target");
 	local isRaid = UnitInRaid("target");
 	if (targetName == nil or targetName == "") then
-		DisplayInfomation("你当前没有选择目标。");
+		DisplayInfomation("You have no target.");
 		return;
 	end
 	if (not UnitIsPlayer("target")) then
-		DisplayInfomation("需要选择一个玩家机器人作为目标。");
+		DisplayInfomation("A bot needs to be targetted.");
 		return;
 	end
 	if (isParty == nil and isRaid == nil) then
-		DisplayInfomation("选择目标不在你的队伍中。");
+		DisplayInfomation("The target is not in your group.");
 		return;
 	end
 	-- if (not IsRealPartyLeader()) then
@@ -121,11 +121,11 @@ end
 function CommandInitForLevel(index)
 	local targetName = UnitName("target");
 	if (targetName == nil or targetName == "") then
-		DisplayInfomation("你当前没有选择目标。");
+		DisplayInfomation("You have no target.");
 		return;
 	end
 	if (not UnitIsPlayer("target")) then
-		DisplayInfomation("需要选择一个玩家机器人作为目标。");
+		DisplayInfomation("A bot needs to be targetted.");
 		return;
 	end
 	-- if (not IsRealPartyLeader()) then
@@ -166,7 +166,7 @@ function CommandCombatStop(index)
 			for i=1, GetNumPartyMembers(), 1 do
 				local name = (UnitName("party"..i));
 				if (name) then
-					DisplayInfomation("小队中的 "..name.." 脱离战斗");
+					DisplayInfomation("In the group "..name.." out of combat");
 					SendChatMessage(UnBotExecuteCommand[index]..name, "PARTY");
 				end
 			end
@@ -208,15 +208,15 @@ function CommandUnBotItemList(index)
 	local isParty = UnitInParty("target");
 	local isRaid = UnitInRaid("target");
 	if (targetName == nil or targetName == "") then
-		DisplayInfomation("你当前没有选择目标。");
+		DisplayInfomation("You have no target.");
 		return;
 	end
 	if (not UnitIsPlayer("target")) then
-		DisplayInfomation("需要选择一个玩家机器人作为目标。");
+		DisplayInfomation("A bot needs to be targetted.");
 		return;
 	end
 	if (isParty == nil and isRaid == nil) then
-		DisplayInfomation("选择目标不在你的队伍中。");
+		DisplayInfomation("The target is not in your group.");
 		return;
 	end
 	-- if (not IsRealPartyLeader()) then
@@ -232,15 +232,15 @@ function CommandUnBotDestroyItem(index)
 	local isParty = UnitInParty("target");
 	local isRaid = UnitInRaid("target");
 	if (targetName == nil or targetName == "") then
-		DisplayInfomation("你当前没有选择目标。");
+		DisplayInfomation("You have no target.");
 		return;
 	end
 	if (not UnitIsPlayer("target")) then
-		DisplayInfomation("需要选择一个玩家机器人作为目标。");
+		DisplayInfomation("A bot needs to be targetted.");
 		return;
 	end
 	if (isParty == nil and isRaid == nil) then
-		DisplayInfomation("选择目标不在你的队伍中。");
+		DisplayInfomation("The target is not in your group.");
 		return;
 	end
 	-- if (not IsRealPartyLeader()) then
@@ -256,15 +256,15 @@ function CommandUnBotEquipItem(index)
 	local isParty = UnitInParty("target");
 	local isRaid = UnitInRaid("target");
 	if (targetName == nil or targetName == "") then
-		DisplayInfomation("你当前没有选择目标。");
+		DisplayInfomation("You have no target.");
 		return;
 	end
 	if (not UnitIsPlayer("target")) then
-		DisplayInfomation("需要选择一个玩家机器人作为目标。");
+		DisplayInfomation("A bot needs to be targetted.");
 		return;
 	end
 	if (isParty == nil and isRaid == nil) then
-		DisplayInfomation("选择目标不在你的队伍中。");
+		DisplayInfomation("The target is not in your group.");
 		return;
 	end
 	-- if (not IsRealPartyLeader()) then
@@ -280,15 +280,15 @@ function CommandUnBotSellItem(index)
 	local isParty = UnitInParty("target");
 	local isRaid = UnitInRaid("target");
 	if (targetName == nil or targetName == "") then
-		DisplayInfomation("你当前没有选择目标。");
+		DisplayInfomation("You have no target.");
 		return;
 	end
 	if (not UnitIsPlayer("target")) then
-		DisplayInfomation("需要选择一个玩家机器人作为目标。");
+		DisplayInfomation("A bot needs to be targetted.");
 		return;
 	end
 	if (isParty == nil and isRaid == nil) then
-		DisplayInfomation("选择目标不在你的队伍中。");
+		DisplayInfomation("The target is not in your group.");
 		return;
 	end
 	-- if (not IsRealPartyLeader()) then
@@ -304,15 +304,15 @@ function CommandUnBotUseItem(index)
 	local isParty = UnitInParty("target");
 	local isRaid = UnitInRaid("target");
 	if (targetName == nil or targetName == "") then
-		DisplayInfomation("你当前没有选择目标。");
+		DisplayInfomation("You have no target.");
 		return;
 	end
 	if (not UnitIsPlayer("target")) then
-		DisplayInfomation("需要选择一个玩家机器人作为目标。");
+		DisplayInfomation("A bot needs to be targetted.");
 		return;
 	end
 	if (isParty == nil and isRaid == nil) then
-		DisplayInfomation("选择目标不在你的队伍中。");
+		DisplayInfomation("The target is not in your group.");
 		return;
 	end
 	-- if (not IsRealPartyLeader()) then
@@ -328,15 +328,15 @@ function CommandUnBotSpells(index)
 	local isParty = UnitInParty("target");
 	local isRaid = UnitInRaid("target");
 	if (targetName == nil or targetName == "") then
-		DisplayInfomation("你当前没有选择目标。");
+		DisplayInfomation("You have no target.");
 		return;
 	end
 	if (not UnitIsPlayer("target")) then
-		DisplayInfomation("需要选择一个玩家机器人作为目标。");
+		DisplayInfomation("A bot needs to be targetted.");
 		return;
 	end
 	if (isParty == nil and isRaid == nil) then
-		DisplayInfomation("选择目标不在你的队伍中。");
+		DisplayInfomation("The target is not in your group.");
 		return;
 	end
 	-- if (not IsRealPartyLeader()) then

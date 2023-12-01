@@ -15,7 +15,7 @@
 					GameTooltip:SetOwner(self, "ANCHOR_TOPRIGHT");
 					GameTooltip:SetHyperlink("item:"..tostring(self.item[3])..":0:0:0:0:0:0:0");
 					GameTooltip:AddLine(" ",1,1,1,1);
-					GameTooltip:AddLine("鼠标左键单击：让 "..self.targetName.." 装备这个道具。",0.75,0.75,0,1);
+					GameTooltip:AddLine("Left mouse button： Make "..self.targetName.." equip this item.",0.75,0.75,0,1);
 					GameTooltip:Show();
 				end
 			</OnEnter>
