@@ -24,7 +24,7 @@
 				self:SetPushedTexture([[Interface\BUTTONS\UI-Quickslot-Depress]]);
 				self:SetHighlightTexture([[Interface\Buttons\UI-Common-MouseHilight]],"ADD");
 				local bindingKeytext = self:CreateFontString("$parentLabel", "ARTWORK", "GameFontNormalSmall");
-				bindingKeytext:SetFont([[Fonts\ZYHei.ttf]],12);
+				bindingKeytext:SetFont("Fonts\\FRIZQT__.TTF",12);
 				bindingKeytext:SetPoint("TOP", self.Icon, "TOP", 1, -1);
 			</OnShow>
 			<OnEnter>

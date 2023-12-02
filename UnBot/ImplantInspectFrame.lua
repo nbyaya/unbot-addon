@@ -153,7 +153,7 @@ function UnBotInspectPaperDollFrame_OnShow(...)
 	dstFrame.waitReloadTime = 0.5;
 	if (dstFrame.ubHelpText == nil) then
 		dstFrame.ubHelpText = dstFrame:CreateFontString(dstFrame:GetName().."UnBotHelp","ARTWORK");
-		dstFrame.ubHelpText:SetFont([[Fonts\ZYHei.ttf]],12);
+		dstFrame.ubHelpText:SetFont("Fonts\\FRIZQT__.TTF",12);
 		dstFrame.ubHelpText:SetTextColor(0,0.8,0.8,1);
 		dstFrame.ubHelpText:SetText("In the equipment slot: Left mouse button to change the equipment and right mouse button to remove the equipment.");
 		dstFrame.ubHelpText:SetPoint("TOP",dstFrame,"TOP",15,-58);

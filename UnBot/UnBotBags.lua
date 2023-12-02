@@ -49,7 +49,7 @@ local function CreateIconGroupByParent(fromParent,hheadGap,vheadGap,hnum,vnum,hg
 			iconsGroup[iconsIndex] = newFrame;
 			iconsIndex = iconsIndex + 1;
 			newFrame.countLabel = newFrame:CreateFontString(newFrame:GetName().."Count","OVERLAY");
-			newFrame.countLabel:SetFont([[Fonts\ZYHei.ttf]],12);
+			newFrame.countLabel:SetFont("Fonts\\FRIZQT__.TTF",12);
 			newFrame.countLabel:SetTextColor(0.8,0,0.8,1);
 			newFrame.countLabel:SetHeight(12);
 			newFrame.countLabel:SetText(" ");
@@ -165,7 +165,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	end
 	local newFrame = CreateFrame("CheckButton",fromParent:GetName().."BagsType1",fromParent,"UnBotBagsTypeTemplate");
 	newFrame.title = newFrame:CreateFontString(newFrame:GetName().."Title","ARTWORK");
-	newFrame.title:SetFont([[Fonts\ZYHei.ttf]],20);
+	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",20);
 	newFrame.title:SetTextColor(1.0,0.8,0,1);
 	newFrame.title:SetText("Check");
 	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",2,-5);
@@ -184,7 +184,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	
 	newFrame = CreateFrame("CheckButton",fromParent:GetName().."BagsType2",fromParent,"UnBotBagsTypeTemplate");
 	newFrame.title = newFrame:CreateFontString(newFrame:GetName().."Title","ARTWORK");
-	newFrame.title:SetFont([[Fonts\ZYHei.ttf]],20);
+	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",20);
 	newFrame.title:SetTextColor(1.0,0.8,0,1);
 	newFrame.title:SetText("Equipment");
 	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",2,-5);
@@ -203,7 +203,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	
 	newFrame = CreateFrame("CheckButton",fromParent:GetName().."BagsType3",fromParent,"UnBotBagsTypeTemplate");
 	newFrame.title = newFrame:CreateFontString(newFrame:GetName().."Title","ARTWORK");
-	newFrame.title:SetFont([[Fonts\ZYHei.ttf]],20);
+	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",20);
 	newFrame.title:SetTextColor(1.0,0.8,0,1);
 	newFrame.title:SetText("Discard");
 	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",2,-5);
@@ -222,7 +222,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	
 	newFrame = CreateFrame("CheckButton",fromParent:GetName().."BagsType4",fromParent,"UnBotBagsTypeTemplate");
 	newFrame.title = newFrame:CreateFontString(newFrame:GetName().."Title","ARTWORK");
-	newFrame.title:SetFont([[Fonts\ZYHei.ttf]],20);
+	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",20);
 	newFrame.title:SetTextColor(1.0,0.8,0,1);
 	newFrame.title:SetText("Sell");
 	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",2,-5);
@@ -241,7 +241,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	
 	newFrame = CreateFrame("CheckButton",fromParent:GetName().."BagsType5",fromParent,"UnBotBagsTypeTemplate");
 	newFrame.title = newFrame:CreateFontString(newFrame:GetName().."Title","ARTWORK");
-	newFrame.title:SetFont([[Fonts\ZYHei.ttf]],20);
+	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",20);
 	newFrame.title:SetTextColor(1.0,0.8,0,1);
 	newFrame.title:SetText("Use");
 	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",2,-5);
@@ -278,7 +278,7 @@ local function CreateOptionByParent(fromParent,flushFunc)
 	end
 
 	fromParent.title = fromParent:CreateFontString(fromParent:GetName().."Title","ARTWORK");
-	fromParent.title:SetFont([[Fonts\ZYHei.ttf]],15);
+	fromParent.title:SetFont("Fonts\\FRIZQT__.TTF",15);
 	fromParent.title:SetTextColor(1.0,1.0,1.0,1);
 	fromParent.title:SetText(UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, fromParent.activeText));
 	fromParent.title:SetPoint("TOPLEFT",fromParent,"TOPLEFT",10,-8);
@@ -286,7 +286,7 @@ local function CreateOptionByParent(fromParent,flushFunc)
 	fromParent.title:SetShadowOffset(1,-1);
 
 	fromParent.page = fromParent:CreateFontString(fromParent:GetName().."Page","ARTWORK");
-	fromParent.page:SetFont([[Fonts\ZYHei.ttf]],15);
+	fromParent.page:SetFont("Fonts\\FRIZQT__.TTF",15);
 	fromParent.page:SetTextColor(1.0,1.0,1.0,1);
 	fromParent.page:SetText("0-0");
 	fromParent.page:SetPoint("CENTER",fromParent,"BOTTOMLEFT",90,22);

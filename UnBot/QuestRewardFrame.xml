@@ -31,7 +31,7 @@
           </Anchors>
           <TexCoords left="0.2" right="0.8" top="0" bottom="0.6" />
         </Texture>
-        <FontString name="$parentTitleLabel" font="Fonts\ZYHei.TTF" text="Select reward">
+        <FontString name="$parentTitleLabel" font="Fonts\FRIZQT__.TTF" text="Select reward">
           <Size>
             <AbsDimension x="280" y="0" />
           </Size>

@@ -103,7 +103,7 @@
           </Anchors>
           <TexCoords left="0.2" right="0.8" top="0" bottom="0.6" />
         </Texture>
-        <FontString name="$parentTitleString" font="Fonts\ZYHei.TTF" text="Select bot to bring online"> <!-- Needs correction -->
+        <FontString name="$parentTitleString" font="Fonts\FRIZQT__.TTF" text="Select bot to bring online"> <!-- Needs correction -->
           <Size>
             <AbsDimension x="140" y="0" />
           </Size>
@@ -167,7 +167,7 @@
         </Anchors>
         <Layers>
           <Layer>
-            <FontString name="$parentLabel" font="Fonts\ZYHei.TTF" text="Click the left mouse button to bring the bot online, and right click to invite it to your group"> <!-- Needs correction -->
+            <FontString name="$parentLabel" font="Fonts\FRIZQT__.TTF" text="Click the left mouse button to bring the bot online, and right click to invite it to your group"> <!-- Needs correction -->
               <Anchors>
                 <Anchor point="TOPLEFT" />
                 <Anchor point="BOTTOMRIGHT" />
@@ -262,7 +262,7 @@
         </Anchors>
         <Layers>
           <Layer>
-            <FontString name="$parentText" font="Fonts\ZYHei.TTF" text="Warrior">
+            <FontString name="$parentText" font="Fonts\FRIZQT__.TTF" text="Warrior">
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
@@ -299,7 +299,7 @@
         </Anchors>
         <Layers>
           <Layer>
-            <FontString name="$parentText" font="Fonts\ZYHei.TTF" text="Friends list">
+            <FontString name="$parentText" font="Fonts\FRIZQT__.TTF" text="Friends list">
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
@@ -336,7 +336,7 @@
         </Anchors>
         <Layers>
           <Layer>
-            <FontString name="$parentText" font="Fonts\ZYHei.TTF" text="Paladin">
+            <FontString name="$parentText" font="Fonts\FRIZQT__.TTF" text="Paladin">
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
@@ -373,7 +373,7 @@
         </Anchors>
         <Layers>
           <Layer>
-            <FontString name="$parentText" font="Fonts\ZYHei.TTF" text="Rogue">
+            <FontString name="$parentText" font="Fonts\FRIZQT__.TTF" text="Rogue">
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
@@ -410,7 +410,7 @@
         </Anchors>
         <Layers>
           <Layer>
-            <FontString name="$parentText" font="Fonts\ZYHei.TTF" text="Druid">
+            <FontString name="$parentText" font="Fonts\FRIZQT__.TTF" text="Druid">
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
@@ -447,7 +447,7 @@
         </Anchors>
         <Layers>
           <Layer>
-            <FontString name="$parentText" font="Fonts\ZYHei.TTF" text="Hunter">
+            <FontString name="$parentText" font="Fonts\FRIZQT__.TTF" text="Hunter">
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
@@ -484,7 +484,7 @@
         </Anchors>
         <Layers>
           <Layer>
-            <FontString name="$parentText" font="Fonts\ZYHei.TTF" text="Shaman">
+            <FontString name="$parentText" font="Fonts\FRIZQT__.TTF" text="Shaman">
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
@@ -521,7 +521,7 @@
         </Anchors>
         <Layers>
           <Layer>
-            <FontString name="$parentText" font="Fonts\ZYHei.TTF" text="Mage">
+            <FontString name="$parentText" font="Fonts\FRIZQT__.TTF" text="Mage">
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
@@ -558,7 +558,7 @@
         </Anchors>
         <Layers>
           <Layer>
-            <FontString name="$parentText" font="Fonts\ZYHei.TTF" text="Warlock">
+            <FontString name="$parentText" font="Fonts\FRIZQT__.TTF" text="Warlock">
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
@@ -595,7 +595,7 @@
         </Anchors>
         <Layers>
           <Layer>
-            <FontString name="$parentText" font="Fonts\ZYHei.TTF" text="Priest">
+            <FontString name="$parentText" font="Fonts\FRIZQT__.TTF" text="Priest">
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
@@ -632,7 +632,7 @@
         </Anchors>
         <Layers>
           <Layer>
-            <FontString name="$parentText" font="Fonts\ZYHei.TTF" text="Death Knight">
+            <FontString name="$parentText" font="Fonts\FRIZQT__.TTF" text="Death Knight">
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
