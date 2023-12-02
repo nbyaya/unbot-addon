@@ -20,7 +20,7 @@ function UnBotCanFlushInfo(bagsFrame)
 end
 
 function UnBotBagsHeadFrameSetFontText(rece, name, info)
-	local text = "|cff0000cc"..rece.."|r |cff00cccc"..name.."|r -|cffcccccc"..info.."|r";
+	local text = "|cff0000cc"..rece.."|r |cff00cccc"..name.."|r - |cffcccccc"..info.."|r";
 	return text;
 end
 
@@ -175,7 +175,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	newFrame.parentFrame = fromParent;
 	newFrame.command = nil;
 	newFrame.afterRemove = false;
-	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, " Inventory"); -- Needs correction
+	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, "Inventory");
 	newFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", -50, -36 * 1);
 	table.insert(fromParent.optionsType, newFrame);
 	if (checkedIndex == 1) then
@@ -194,7 +194,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	newFrame.parentFrame = fromParent;
 	newFrame.command = UnBotExecuteCommand[66];
 	newFrame.afterRemove = true;
-	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, " Equip items"); -- Needs correction
+	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, "Equip item");
 	newFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", -50, -36 * 2);
 	table.insert(fromParent.optionsType, newFrame);
 	if (checkedIndex == 2) then
@@ -213,7 +213,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	newFrame.parentFrame = fromParent;
 	newFrame.command = UnBotExecuteCommand[65];
 	newFrame.afterRemove = true;
-	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, " Discard items"); -- Needs correction
+	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, "Discard item");
 	newFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", -50, -36 * 3);
 	table.insert(fromParent.optionsType, newFrame);
 	if (checkedIndex == 3) then
@@ -232,7 +232,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	newFrame.parentFrame = fromParent;
 	newFrame.command = UnBotExecuteCommand[67];
 	newFrame.afterRemove = true;
-	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, " Sell items"); -- Needs correction
+	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, "Sell item");
 	newFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", -50, -36 * 4);
 	table.insert(fromParent.optionsType, newFrame);
 	if (checkedIndex == 4) then
@@ -251,7 +251,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	newFrame.parentFrame = fromParent;
 	newFrame.command = UnBotExecuteCommand[68];
 	newFrame.afterRemove = true;
-	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, " Use items"); -- Needs correction
+	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, "Use item");
 	newFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", -50, -36 * 5);
 	table.insert(fromParent.optionsType, newFrame);
 	if (checkedIndex == 5) then
@@ -278,7 +278,7 @@ local function CreateOptionByParent(fromParent,flushFunc)
 	end
 
 	fromParent.title = fromParent:CreateFontString(fromParent:GetName().."Title","ARTWORK");
-	fromParent.title:SetFont("Fonts\\FRIZQT__.TTF",15);
+	fromParent.title:SetFont("Fonts\\FRIZQT__.TTF",14);
 	fromParent.title:SetTextColor(1.0,1.0,1.0,1);
 	fromParent.title:SetText(UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, fromParent.activeText));
 	fromParent.title:SetPoint("TOPLEFT",fromParent,"TOPLEFT",10,-8);
@@ -286,7 +286,7 @@ local function CreateOptionByParent(fromParent,flushFunc)
 	fromParent.title:SetShadowOffset(1,-1);
 
 	fromParent.page = fromParent:CreateFontString(fromParent:GetName().."Page","ARTWORK");
-	fromParent.page:SetFont("Fonts\\FRIZQT__.TTF",15);
+	fromParent.page:SetFont("Fonts\\FRIZQT__.TTF",12);
 	fromParent.page:SetTextColor(1.0,1.0,1.0,1);
 	fromParent.page:SetText("0-0");
 	fromParent.page:SetPoint("CENTER",fromParent,"BOTTOMLEFT",90,22);
@@ -448,7 +448,7 @@ function UpdateUnBotBagsFramePage(bagsFrame)
 	if (overIndex == 0) then
 		overIndex = 1;
 	end
-	bagsFrame.page:SetText("Page "..tostring(bagsFrame.currentPage).." - "..tostring(overIndex));
+	bagsFrame.page:SetText("Page "..tostring(bagsFrame.currentPage).." of "..tostring(overIndex));
 end
 
 function ExecuteCommandByBagsItem(bagsFrame,index)

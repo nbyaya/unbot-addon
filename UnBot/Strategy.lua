@@ -34,7 +34,7 @@ local function CreateStrategyFrame(name)
 	end
 
 	strategyFrame.title = strategyFrame:CreateFontString(strategyFrame:GetName().."Title","ARTWORK");
-	strategyFrame.title:SetFont("Fonts\\FRIZQT__.TTF",14);
+	strategyFrame.title:SetFont("Fonts\\FRIZQT__.TTF",13);
 	strategyFrame.title:SetTextColor(1,0,1,1);
 	strategyFrame.title:SetText("Strategy Editor for |cff00ffff"..name.."|r");
 	strategyFrame.title:SetPoint("TOP",strategyFrame,"TOP",0,0);
@@ -42,7 +42,7 @@ local function CreateStrategyFrame(name)
 	strategyFrame.title:SetShadowOffset(1,-1);
 
 	strategyFrame.leftText = strategyFrame:CreateFontString(strategyFrame:GetName().."LeftText","ARTWORK");
-	strategyFrame.leftText:SetFont("Fonts\\FRIZQT__.TTF",14);
+	strategyFrame.leftText:SetFont("Fonts\\FRIZQT__.TTF",13);
 	strategyFrame.leftText:SetTextColor(1,0,0,1);
 	strategyFrame.leftText:SetText("Combat");
 	strategyFrame.leftText:SetPoint("CENTER",strategyFrame,"TOPLEFT",80,-52);
@@ -50,7 +50,7 @@ local function CreateStrategyFrame(name)
 	strategyFrame.leftText:SetShadowOffset(1,-1);
 
 	strategyFrame.rightText = strategyFrame:CreateFontString(strategyFrame:GetName().."RightText","ARTWORK");
-	strategyFrame.rightText:SetFont("Fonts\\FRIZQT__.TTF",14);
+	strategyFrame.rightText:SetFont("Fonts\\FRIZQT__.TTF",13);
 	strategyFrame.rightText:SetTextColor(0,1,0,1);
 	strategyFrame.rightText:SetText("Non-combat");
 	strategyFrame.rightText:SetPoint("CENTER",strategyFrame,"TOPRIGHT",-85,-52);
@@ -89,10 +89,10 @@ local function CreateStrategyFrame(name)
 	strategyFrame:Show();
 
 	local closeFrame = CreateFrame("Button","StrategyFrameCloseBtn"..name,strategyFrame,"UIPanelCloseButton");
-	closeFrame:SetWidth(58);
-	closeFrame:SetHeight(58);
+	closeFrame:SetWidth(40);
+	closeFrame:SetHeight(40);
 	closeFrame:Show();
-	closeFrame:SetPoint("TOPRIGHT", strategyFrame, "TOPRIGHT", 20, 20);
+	closeFrame:SetPoint("TOPRIGHT", strategyFrame, "TOPRIGHT", -5, -5);
 	closeFrame:SetScript("OnClick", function()
 		RemoveFromStrategyFrame(strategyFrame)
 		strategyFrame:Hide()
@@ -228,7 +228,7 @@ function StrategyOption_OnEnter(btn, name, use, strategyType, data)
 		GameTooltip:AddLine("Inactive",1,0,0,1);
 	end
 	GameTooltip:AddLine(data[3],0,1,0,1);
-	GameTooltip:AddLine("Some strategies are ineffective for certain classes and will be rejected by bots even if they are activated, and some strategies are mutually exclusive.",1,0.5,0,1);
+	GameTooltip:AddLine("Some strategies are ineffective for certain classes and some are mutually exclusive.",1,0.5,0,1);
 	GameTooltip:AddLine(" ",1,1,1,1);
 	GameTooltip:AddDoubleLine("Uses:",data[1],0,0.85,0.85,0,0.85,0.85);
 	if (use) then
