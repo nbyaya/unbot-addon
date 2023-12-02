@@ -121,14 +121,14 @@ function UnBotShowButtonTips(newFrame, fromParent)
 						GameTooltip:AddDoubleLine(UnBotGetCostEnergyText(spellData[7],spellData[8]),tostring(spellData[6]),1,1,1,0.5,0.5,0.5);
 						local castDis = "";
 						if (spellData[10] <= 0) then
-							castDis = "Selfcast"; -- Needs correction
+							castDis = "Self-cast";
 						else
-							castDis = tostring(spellData[10]).."Yards"; -- Needs correction
+							castDis = tostring(spellData[10]).." yards";
 						end
 						if (spellData[9] <= 0) then
-							GameTooltip:AddDoubleLine("Instant cast",castDis,0.65,0.55,0,0,0.8,0.8); -- Needs correction
+							GameTooltip:AddDoubleLine("Instant",castDis,0.65,0.55,0,0,0.8,0.8);
 						else
-							GameTooltip:AddDoubleLine(tostring(spellData[9]/1000).."Cast time (seconds)",castDis,0.65,0.55,0,0,0.8,0.8); -- Needs correction
+							GameTooltip:AddDoubleLine("Cast time: " .. tostring(spellData[9]/1000).." second(s)",castDis,0.65,0.55,0,0,0.8,0.8); -- Needs correction
 						end
 					end
 				end
@@ -138,22 +138,22 @@ function UnBotShowButtonTips(newFrame, fromParent)
 			end
 			GameTooltip:AddLine(" ",1,1,1,1);
 			if (fromParent.command ~= nil and fromParent.command ~= "") then
-				GameTooltip:AddLine("Left mouse button: Let "..fromParent.target.." "..fromParent.activeText,0.65,0.55,0,1); -- Needs correction
+				if (fromParent.bagsType == 1) then
+					GameTooltip:AddLine("LMB: Use",0.65,0.55,0,1);
+				elseif (fromParent.bagsType == 2) then
+					GameTooltip:AddLine("LMB: Cast",0.65,0.55,0,1);
+				else
+					GameTooltip:AddLine("LMB: Let "..fromParent.target.." "..fromParent.activeText,0.65,0.55,0,1); -- Needs correction
+				end
 			end
-			if (fromParent.bagsType == 1) then
-				GameTooltip:AddLine("Right mouse button: Hide this item",0.65,0.55,0,1);
-			elseif (fromParent.bagsType == 2) then
-				GameTooltip:AddLine("Right mouse button: Hide this skill",0.65,0.55,0,1);
-			else
-				GameTooltip:AddLine("Right mouse button: Hide this icon",0.65,0.55,0,1);
-			end
+			GameTooltip:AddLine("RMB: Hide",0.65,0.55,0,1);
 			if (fromParent.bagsType == 2) then
-				GameTooltip:AddDoubleLine("Spell ID:",tostring(itemID),0,0.8,0.8,0.8,0,0);
+				GameTooltip:AddDoubleLine("ID:",tostring(itemID),0,0.8,0.8,0.8,0,0);
 			end
 		else
 			GameTooltip:AddLine(newFrame.bagsIcon);
 		end
-		GameTooltip:AddDoubleLine("Index order:",tostring(newFrame.iconIndex),0,0,1,1,0,1);
+		GameTooltip:AddDoubleLine("Index:",tostring(newFrame.iconIndex),0,0,1,1,0,1);
 		GameTooltip:AddTexture(fromParent.dataGroup[newFrame.dataIndex][4]);
 		GameTooltip:Show();
 	end
@@ -175,7 +175,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	newFrame.parentFrame = fromParent;
 	newFrame.command = nil;
 	newFrame.afterRemove = false;
-	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, " View items"); -- Needs correction
+	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, " Inventory"); -- Needs correction
 	newFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", -50, -36 * 1);
 	table.insert(fromParent.optionsType, newFrame);
 	if (checkedIndex == 1) then

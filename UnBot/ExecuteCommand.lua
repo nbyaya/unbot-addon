@@ -343,7 +343,7 @@ function CommandUnBotSpells(index)
 	-- 	DisplayInfomation("你当前不是队伍领袖。");
 	-- 	return;
 	-- end
-	CreateIconsByUnBotBagsFrame(0, "UnBotSpells"..targetName,2,false,{},targetName,targetClass," Cast spell",FlushItemsToBags,UnBotExecuteCommand[index],GetItemFunc); -- Needs correction
+	CreateIconsByUnBotBagsFrame(0, "UnBotSpells"..targetName,2,false,{},targetName,targetClass," Spells",FlushItemsToBags,UnBotExecuteCommand[index],GetItemFunc); -- Needs correction
 end
 
 function CommandAddFriends(index)
