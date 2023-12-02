@@ -34,25 +34,25 @@ local function CreateStrategyFrame(name)
 	end
 
 	strategyFrame.title = strategyFrame:CreateFontString(strategyFrame:GetName().."Title","ARTWORK");
-	strategyFrame.title:SetFont("Fonts\\FRIZQT__.TTF",24);
+	strategyFrame.title:SetFont("Fonts\\FRIZQT__.TTF",14);
 	strategyFrame.title:SetTextColor(1,0,1,1);
-	strategyFrame.title:SetText("|cff00ffff"..name.."|r".."Policy Editor"); -- Needs correction
-	strategyFrame.title:SetPoint("TOP",strategyFrame,"TOP",0,5);
+	strategyFrame.title:SetText("Strategy Editor for |cff00ffff"..name.."|r");
+	strategyFrame.title:SetPoint("TOP",strategyFrame,"TOP",0,0);
 	strategyFrame.title:SetShadowColor(0,0,0);
 	strategyFrame.title:SetShadowOffset(1,-1);
 
 	strategyFrame.leftText = strategyFrame:CreateFontString(strategyFrame:GetName().."LeftText","ARTWORK");
-	strategyFrame.leftText:SetFont("Fonts\\FRIZQT__.TTF",24);
+	strategyFrame.leftText:SetFont("Fonts\\FRIZQT__.TTF",14);
 	strategyFrame.leftText:SetTextColor(1,0,0,1);
-	strategyFrame.leftText:SetText("Combat Strategy");
+	strategyFrame.leftText:SetText("Combat");
 	strategyFrame.leftText:SetPoint("CENTER",strategyFrame,"TOPLEFT",80,-52);
 	strategyFrame.leftText:SetShadowColor(0,0,0);
 	strategyFrame.leftText:SetShadowOffset(1,-1);
 
 	strategyFrame.rightText = strategyFrame:CreateFontString(strategyFrame:GetName().."RightText","ARTWORK");
-	strategyFrame.rightText:SetFont("Fonts\\FRIZQT__.TTF",24);
+	strategyFrame.rightText:SetFont("Fonts\\FRIZQT__.TTF",14);
 	strategyFrame.rightText:SetTextColor(0,1,0,1);
-	strategyFrame.rightText:SetText("Non-combat strategy");
+	strategyFrame.rightText:SetText("Non-combat");
 	strategyFrame.rightText:SetPoint("CENTER",strategyFrame,"TOPRIGHT",-85,-52);
 	strategyFrame.rightText:SetShadowColor(0,0,0);
 	strategyFrame.rightText:SetShadowOffset(1,-1);
@@ -223,18 +223,18 @@ function StrategyOption_OnEnter(btn, name, use, strategyType, data)
 	GameTooltip:SetOwner(btn, "ANCHOR_TOPRIGHT");
 	GameTooltip:AddLine(data[2],1,1,1,1);
 	if (use) then
-		GameTooltip:AddLine(" activated",0,0,1,1);
+		GameTooltip:AddLine("Active",0,0,1,1);
 	else
-		GameTooltip:AddLine(" deactivated",1,0,0,1);
+		GameTooltip:AddLine("Inactive",1,0,0,1);
 	end
 	GameTooltip:AddLine(data[3],0,1,0,1);
 	GameTooltip:AddLine("Some strategies are ineffective for certain classes and will be rejected by bots even if they are activated, and some strategies are mutually exclusive.",1,0.5,0,1);
 	GameTooltip:AddLine(" ",1,1,1,1);
-	GameTooltip:AddDoubleLine(" Excuting order：",data[1],0,0.85,0.85,0,0.85,0.85);
+	GameTooltip:AddDoubleLine("Uses:",data[1],0,0.85,0.85,0,0.85,0.85);
 	if (use) then
-		GameTooltip:AddLine(" Left mouse button: Cancel the policy",0.65,0.55,0,1);
+		GameTooltip:AddLine("LMB: Deactivate",0.65,0.55,0,1);
 	else
-		GameTooltip:AddLine(" Left mouse button: Activate the policy",0.65,0.55,0,1);
+		GameTooltip:AddLine("LMB: Activate",0.65,0.55,0,1);
 	end
 	GameTooltip:Show();
 end

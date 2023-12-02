@@ -20,7 +20,7 @@ function UnBotCanFlushInfo(bagsFrame)
 end
 
 function UnBotBagsHeadFrameSetFontText(rece, name, info)
-	local text = "|cff0000cc"..rece.."|r|cff00cccc"..name.."|r-|cffcccccc"..info.."|r";
+	local text = "|cff0000cc"..rece.."|r |cff00cccc"..name.."|r -|cffcccccc"..info.."|r";
 	return text;
 end
 
@@ -165,10 +165,10 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	end
 	local newFrame = CreateFrame("CheckButton",fromParent:GetName().."BagsType1",fromParent,"UnBotBagsTypeTemplate");
 	newFrame.title = newFrame:CreateFontString(newFrame:GetName().."Title","ARTWORK");
-	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",20);
+	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",12);
 	newFrame.title:SetTextColor(1.0,0.8,0,1);
-	newFrame.title:SetText("Check");
-	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",2,-5);
+	newFrame.title:SetText("View");
+	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",-2,-8);
 	newFrame.title:SetShadowColor(0,0,0);
 	newFrame.title:SetShadowOffset(1,-1);
 	newFrame:Show();
@@ -184,17 +184,17 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	
 	newFrame = CreateFrame("CheckButton",fromParent:GetName().."BagsType2",fromParent,"UnBotBagsTypeTemplate");
 	newFrame.title = newFrame:CreateFontString(newFrame:GetName().."Title","ARTWORK");
-	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",20);
+	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",12);
 	newFrame.title:SetTextColor(1.0,0.8,0,1);
-	newFrame.title:SetText("Equipment");
-	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",2,-5);
+	newFrame.title:SetText("Equip");
+	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",-2,-8);
 	newFrame.title:SetShadowColor(0,0,0);
 	newFrame.title:SetShadowOffset(1,-1);
 	newFrame:Show();
 	newFrame.parentFrame = fromParent;
 	newFrame.command = UnBotExecuteCommand[66];
 	newFrame.afterRemove = true;
-	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, " Equipment items"); -- Needs correction
+	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, " Equip items"); -- Needs correction
 	newFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", -50, -36 * 2);
 	table.insert(fromParent.optionsType, newFrame);
 	if (checkedIndex == 2) then
@@ -203,10 +203,10 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	
 	newFrame = CreateFrame("CheckButton",fromParent:GetName().."BagsType3",fromParent,"UnBotBagsTypeTemplate");
 	newFrame.title = newFrame:CreateFontString(newFrame:GetName().."Title","ARTWORK");
-	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",20);
+	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",12);
 	newFrame.title:SetTextColor(1.0,0.8,0,1);
 	newFrame.title:SetText("Discard");
-	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",2,-5);
+	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",-2,-8);
 	newFrame.title:SetShadowColor(0,0,0);
 	newFrame.title:SetShadowOffset(1,-1);
 	newFrame:Show();
@@ -222,10 +222,10 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	
 	newFrame = CreateFrame("CheckButton",fromParent:GetName().."BagsType4",fromParent,"UnBotBagsTypeTemplate");
 	newFrame.title = newFrame:CreateFontString(newFrame:GetName().."Title","ARTWORK");
-	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",20);
+	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",12);
 	newFrame.title:SetTextColor(1.0,0.8,0,1);
 	newFrame.title:SetText("Sell");
-	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",2,-5);
+	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",-2,-8);
 	newFrame.title:SetShadowColor(0,0,0);
 	newFrame.title:SetShadowOffset(1,-1);
 	newFrame:Show();
@@ -241,10 +241,10 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	
 	newFrame = CreateFrame("CheckButton",fromParent:GetName().."BagsType5",fromParent,"UnBotBagsTypeTemplate");
 	newFrame.title = newFrame:CreateFontString(newFrame:GetName().."Title","ARTWORK");
-	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",20);
+	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",12);
 	newFrame.title:SetTextColor(1.0,0.8,0,1);
 	newFrame.title:SetText("Use");
-	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",2,-5);
+	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",-2,-8);
 	newFrame.title:SetShadowColor(0,0,0);
 	newFrame.title:SetShadowOffset(1,-1);
 	newFrame:Show();
@@ -448,7 +448,7 @@ function UpdateUnBotBagsFramePage(bagsFrame)
 	if (overIndex == 0) then
 		overIndex = 1;
 	end
-	bagsFrame.page:SetText("No "..tostring(bagsFrame.currentPage).." - "..tostring(overIndex).." Page");
+	bagsFrame.page:SetText("Page "..tostring(bagsFrame.currentPage).." - "..tostring(overIndex));
 end
 
 function ExecuteCommandByBagsItem(bagsFrame,index)
