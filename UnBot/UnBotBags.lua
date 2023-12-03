@@ -139,7 +139,17 @@ function UnBotShowButtonTips(newFrame, fromParent)
 			GameTooltip:AddLine(" ",1,1,1,1);
 			if (fromParent.command ~= nil and fromParent.command ~= "") then
 				if (fromParent.bagsType == 1) then
-					GameTooltip:AddLine("LMB: Use",0.65,0.55,0,1);
+					if (fromParent.command == UnBotExecuteCommand[66]) then
+						GameTooltip:AddLine("LMB: Equip",0.65,0.55,0,1);
+					elseif (tostring(fromParent.command) == UnBotExecuteCommand[65]) then
+						GameTooltip:AddLine("LMB: Discard",0.65,0.55,0,1);
+					elseif (tostring(fromParent.command) == UnBotExecuteCommand[67]) then
+						GameTooltip:AddLine("LMB: Sell",0.65,0.55,0,1);
+					elseif (tostring(fromParent.command) == UnBotExecuteCommand[68]) then
+						GameTooltip:AddLine("LMB: Use",0.65,0.55,0,1);
+					else
+						GameTooltip:AddLine("LMB: Use",0.65,0.55,0,1);
+					end
 				elseif (fromParent.bagsType == 2) then
 					GameTooltip:AddLine("LMB: Cast",0.65,0.55,0,1);
 				else
