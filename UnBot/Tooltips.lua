@@ -389,7 +389,7 @@ UnBotTooltipHelp = {
 [85] = "Resets actions for all bots in your group.",
 [86] = "Makes the targeted bot go offline.",
 [87] = "Makes the targeted bot go online.",
-[88] = "Adds all bots in your group to your friends list."
+[88] = "Adds all bots in your group to your friends list.",
 [89] = "Make all bots automatically attack nearby creatures that yield experience points.",
 };
 
