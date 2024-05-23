@@ -111,7 +111,6 @@ UnBotCommandToGroups = {
 [86] = 1,
 [87] = 1,
 [88] = 10,
-[89] = 2,
 };
 
 UnBotIconFiles = {
@@ -204,7 +203,6 @@ UnBotIconFiles = {
 [86] = 74,
 [87] = 3598,
 [88] = 174,
-[89] = 103
 };
 
 UnBotTooltipTitle = {
@@ -395,8 +393,8 @@ UnBotTooltipHelp = {
 
 UnBotExecuteCommand = {
 [1] = "",
-[2] = ".playerbot bot init=auto",
-[3] = ".playerbot bot init=auto *",
+[2] = ".playerbot bot init=epic",
+[3] = ".playerbot bot init=epic *",
 -- [4] = ".playerbot bot update",
 [5] = ".reset talents",
 -- [6] = ".playerbot bot talent=1",
@@ -482,7 +480,6 @@ UnBotExecuteCommand = {
 [86] = ".playerbot bot remove",
 [87] = ".playerbot bot add",
 -- [88] = "add friends"
-[89] = "grind",
 };
 
 --1 = 不需要选择目标
@@ -579,5 +576,4 @@ UnBotCommandType = {
 [86] = 2,
 [87] = 2,
 [88] = 4,
-[89] = 4,
 };
