@@ -297,6 +297,7 @@ UnBotTooltipTitle = {
 [86] = "Make a bot go offline",
 [87] = "Make a bot go online",
 [88] = "Add all bots to your friends list",
+[89] = "Grind", -- Needs correction
 };
 
 UnBotTooltipHelp = {
@@ -389,6 +390,7 @@ UnBotTooltipHelp = {
 [86] = "Makes the targeted bot go offline.",
 [87] = "Makes the targeted bot go online.",
 [88] = "Adds all bots in your group to your friends list."
+[89] = "Make all bots automatically attack nearby creatures that yield experience points.",
 };
 
 UnBotExecuteCommand = {
