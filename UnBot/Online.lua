@@ -123,7 +123,8 @@ function UnBotCreateMemberBar(member, index, fromParent)
 	newFrame.index = index;
 	local height = newFrame:GetHeight() + 3;
 	newFrame:SetPoint("TOPLEFT", fromParent, "TOPLEFT", 10, (3 + (index - 1) * height) * (-1));
-	newFrame:SetText(string.format("|cffcc00cc%s|r    |cffffcc00%d class|r", member[1], member[2])); -- Needs correction
+	newFrame:SetText(string.format("|cffcc00cc%s|r    |cffffcc00%d %s|r", member[1], member[2], member[3]));
+	newFrame:SetScale(0.85)
 	newFrame:Show();
 	return newFrame;
 end

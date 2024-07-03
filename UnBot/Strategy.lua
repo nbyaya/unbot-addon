@@ -86,6 +86,8 @@ local function CreateStrategyFrame(name)
 	strategyFrame.rightScrollFrame.child:SetHeight(strategyFrame.rightScrollFrame:GetHeight() - (childGap * 2));
 	strategyFrame.rightScrollFrame:SetScrollChild(strategyFrame.rightScrollFrame.child);
 
+	strategyFrame:SetScale(UnBotScaleConfig);
+
 	strategyFrame:Show();
 
 	local closeFrame = CreateFrame("Button","StrategyFrameCloseBtn"..name,strategyFrame,"UIPanelCloseButton");

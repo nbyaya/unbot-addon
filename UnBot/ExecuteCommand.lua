@@ -91,7 +91,7 @@ end
 function CommandListIcons(index)
 	local iconsList = {};
 	for i=1, #UnBotCommandIconsPath do iconsList[i] = {[1]=i} end
-	CreateIconsByUnBotBagsFrame(0, "UnBotBagsFrameIcon",0,false,iconsList,UnitName("player"),UnitClass("player")," All icons displayed",nil,nil,GetIconFunc); -- Needs correction
+	CreateIconsByUnBotBagsFrame(0, "UnBotBagsFrameIcon",0,false,iconsList,UnitName("player"),UnitClass("player"),"Icons",nil,nil,GetIconFunc);
 end
 
 function CommandInspectFrame(index)
@@ -223,7 +223,7 @@ function CommandUnBotItemList(index)
 	-- 	DisplayInfomation("你当前不是队伍领袖。");
 	-- 	return;
 	-- end
-	CreateIconsByUnBotBagsFrame(1, "UnBotItemList"..targetName,1,false,{},targetName,targetClass," View items",FlushItemsToBags,nil,GetItemFunc); -- Needs correction
+	CreateIconsByUnBotBagsFrame(1, "UnBotItemList"..targetName,1,false,{},targetName,targetClass,"View items",FlushItemsToBags,nil,GetItemFunc);
 end
 
 function CommandUnBotDestroyItem(index)
@@ -247,7 +247,7 @@ function CommandUnBotDestroyItem(index)
 	-- 	DisplayInfomation("你当前不是队伍领袖。");
 	-- 	return;
 	-- end
-	CreateIconsByUnBotBagsFrame(3, "UnBotDestroyItem"..targetName,1,true,{},targetName,targetClass," Discard items",FlushItemsToBags,UnBotExecuteCommand[index],GetItemFunc); -- Needs correction
+	CreateIconsByUnBotBagsFrame(3, "UnBotDestroyItem"..targetName,1,true,{},targetName,targetClass,"Discard items",FlushItemsToBags,UnBotExecuteCommand[index],GetItemFunc);
 end
 
 function CommandUnBotEquipItem(index)
@@ -271,7 +271,7 @@ function CommandUnBotEquipItem(index)
 	-- 	DisplayInfomation("你当前不是队伍领袖。");
 	-- 	return;
 	-- end
-	CreateIconsByUnBotBagsFrame(2, "UnBotEquipItem"..targetName,1,true,{},targetName,targetClass," Equip items",FlushItemsToBags,UnBotExecuteCommand[index],GetItemFunc); -- Needs correction
+	CreateIconsByUnBotBagsFrame(2, "UnBotEquipItem"..targetName,1,true,{},targetName,targetClass,"Equip items",FlushItemsToBags,UnBotExecuteCommand[index],GetItemFunc);
 end
 
 function CommandUnBotSellItem(index)
@@ -295,7 +295,7 @@ function CommandUnBotSellItem(index)
 	-- 	DisplayInfomation("你当前不是队伍领袖。");
 	-- 	return;
 	-- end
-	CreateIconsByUnBotBagsFrame(4, "UnBotSellItem"..targetName,1,true,{},targetName,targetClass," Sell items",FlushItemsToBags,UnBotExecuteCommand[index],GetItemFunc); -- Needs correction
+	CreateIconsByUnBotBagsFrame(4, "UnBotSellItem"..targetName,1,true,{},targetName,targetClass,"Sell items",FlushItemsToBags,UnBotExecuteCommand[index],GetItemFunc);
 end
 
 function CommandUnBotUseItem(index)
@@ -319,7 +319,7 @@ function CommandUnBotUseItem(index)
 	-- 	DisplayInfomation("你当前不是队伍领袖。");
 	-- 	return;
 	-- end
-	CreateIconsByUnBotBagsFrame(5, "UnBotUseItem"..targetName,1,true,{},targetName,targetClass," Use items",FlushItemsToBags,UnBotExecuteCommand[index],GetItemFunc); -- Needs correction
+	CreateIconsByUnBotBagsFrame(5, "UnBotUseItem"..targetName,1,true,{},targetName,targetClass,"Use items",FlushItemsToBags,UnBotExecuteCommand[index],GetItemFunc);
 end
 
 function CommandUnBotSpells(index)
@@ -343,7 +343,7 @@ function CommandUnBotSpells(index)
 	-- 	DisplayInfomation("你当前不是队伍领袖。");
 	-- 	return;
 	-- end
-	CreateIconsByUnBotBagsFrame(0, "UnBotSpells"..targetName,2,false,{},targetName,targetClass," Spells",FlushItemsToBags,UnBotExecuteCommand[index],GetItemFunc); -- Needs correction
+	CreateIconsByUnBotBagsFrame(0, "UnBotSpells"..targetName,2,false,{},targetName,targetClass,"Spells",FlushItemsToBags,UnBotExecuteCommand[index],GetItemFunc);
 end
 
 function CommandAddFriends(index)

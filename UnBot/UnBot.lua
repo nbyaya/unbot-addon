@@ -117,6 +117,9 @@ function InitializeUnBotFrame()
 	UnBotUpdateHotkeys();
 
 	InitializeStrategy();
+
+	SetUnBotScale();
+
 	DisplayInfomation("Bot controller initialized");
 end
 
@@ -399,5 +402,25 @@ function UnBotFrameUpdate(ubFrame, tick)
 	if (ubFrame.DelayInitTime > 0 and tick > ubFrame.DelayInitTime) then
 		ubFrame.DelayInitTime = 0;
 		UnBotInitInspectFrame();
+	end
+end
+
+function SetUnBotScale()
+	if (UnBotScaleConfig == nil or UnButScaleConfig == "" or tonumber(UnBotScaleConfig) == nil) then
+		UnBotScaleConfig = 1;
+	end
+
+	if (UnBotScaleConfig ~= nil and UnButScaleConfig ~= "" and tonumber(UnBotScaleConfig) ~= nil) then
+		UnBotFrame:SetScale(UnBotScaleConfig);
+		OnlineFrame:SetScale(UnBotScaleConfig);
+		NPCFrame:SetScale(UnBotScaleConfig);
+		for i=1, #(UnBotFrame.ShowedStrategy) do
+			local ss = UnBotFrame.ShowedStrategy[i];
+			ss:SetScale(UnBotScaleConfig);
+		end
+		for i=1, #(UnBotFrame.ShowedBags) do
+			local ss = UnBotFrame.ShowedBags[i];
+			ss:SetScale(UnBotScaleConfig);
+		end
 	end
 end

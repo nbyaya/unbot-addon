@@ -13,7 +13,7 @@
 
 	<Button name="UnBotCommandButtonTemplate" virtual="true">
 		<Size>
-			<AbsDimension y="32" x="32"/>
+			<AbsDimension y="24" x="24"/>
 		</Size>
 		<Scripts>
 			<OnShow>
@@ -58,12 +58,12 @@
 	</Button>
 	<Button name="UnBotCommandSubButtonTemplate" virtual="true">
 		<Size>
-			<AbsDimension y="32" x="32"/>
+			<AbsDimension y="24" x="24"/>
 		</Size>
 		<Anchors>
 			<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
 				<Offset>
-					<AbsDimension y="1" x="0"/>
+					<AbsDimension y="0" x="0"/>
 				</Offset>
 			</Anchor>
 		</Anchors>

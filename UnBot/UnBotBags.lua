@@ -43,13 +43,13 @@ local function CreateIconGroupByParent(fromParent,hheadGap,vheadGap,hnum,vnum,hg
 			newFrame:SetHighlightTexture([[Interface\Buttons\UI-Common-MouseHilight]],"ADD");
 			newFrame:Show();
 			local offsetX = hheadGap+(h-1)*size+hgap*h;
-			local offsetY = (vheadGap+(v-1)*size+vgap*v)*(-1);
+			local offsetY = (vheadGap+(v-1)*size+vgap*v)*(-1)+5;
 			newFrame:SetPoint("TOPLEFT", fromParent, "TOPLEFT", offsetX, offsetY);
 			newFrame.index = iconsIndex;
 			iconsGroup[iconsIndex] = newFrame;
 			iconsIndex = iconsIndex + 1;
 			newFrame.countLabel = newFrame:CreateFontString(newFrame:GetName().."Count","OVERLAY");
-			newFrame.countLabel:SetFont("Fonts\\FRIZQT__.TTF",12);
+			newFrame.countLabel:SetFont("Fonts\\FRIZQT__.TTF",11);
 			newFrame.countLabel:SetTextColor(0.8,0,0.8,1);
 			newFrame.countLabel:SetHeight(12);
 			newFrame.countLabel:SetText(" ");
@@ -175,7 +175,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	end
 	local newFrame = CreateFrame("CheckButton",fromParent:GetName().."BagsType1",fromParent,"UnBotBagsTypeTemplate");
 	newFrame.title = newFrame:CreateFontString(newFrame:GetName().."Title","ARTWORK");
-	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",12);
+	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",11);
 	newFrame.title:SetTextColor(1.0,0.8,0,1);
 	newFrame.title:SetText("View");
 	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",-2,-8);
@@ -186,7 +186,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	newFrame.command = nil;
 	newFrame.afterRemove = false;
 	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, "Inventory");
-	newFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", -50, -36 * 1);
+	newFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", -52, -24 * 1);
 	table.insert(fromParent.optionsType, newFrame);
 	if (checkedIndex == 1) then
 		BagsTypeOptionsClick(newFrame, fromParent, newFrame.afterRemove);
@@ -194,7 +194,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	
 	newFrame = CreateFrame("CheckButton",fromParent:GetName().."BagsType2",fromParent,"UnBotBagsTypeTemplate");
 	newFrame.title = newFrame:CreateFontString(newFrame:GetName().."Title","ARTWORK");
-	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",12);
+	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",11);
 	newFrame.title:SetTextColor(1.0,0.8,0,1);
 	newFrame.title:SetText("Equip");
 	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",-2,-8);
@@ -205,7 +205,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	newFrame.command = UnBotExecuteCommand[66];
 	newFrame.afterRemove = true;
 	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, "Equip item");
-	newFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", -50, -36 * 2);
+	newFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", -52, -29 * 2 + 13);
 	table.insert(fromParent.optionsType, newFrame);
 	if (checkedIndex == 2) then
 		BagsTypeOptionsClick(newFrame, fromParent, newFrame.afterRemove);
@@ -213,7 +213,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	
 	newFrame = CreateFrame("CheckButton",fromParent:GetName().."BagsType3",fromParent,"UnBotBagsTypeTemplate");
 	newFrame.title = newFrame:CreateFontString(newFrame:GetName().."Title","ARTWORK");
-	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",12);
+	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",11);
 	newFrame.title:SetTextColor(1.0,0.8,0,1);
 	newFrame.title:SetText("Discard");
 	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",-2,-8);
@@ -224,7 +224,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	newFrame.command = UnBotExecuteCommand[65];
 	newFrame.afterRemove = true;
 	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, "Discard item");
-	newFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", -50, -36 * 3);
+	newFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", -52, -29 * 3 + 21);
 	table.insert(fromParent.optionsType, newFrame);
 	if (checkedIndex == 3) then
 		BagsTypeOptionsClick(newFrame, fromParent, newFrame.afterRemove);
@@ -232,7 +232,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	
 	newFrame = CreateFrame("CheckButton",fromParent:GetName().."BagsType4",fromParent,"UnBotBagsTypeTemplate");
 	newFrame.title = newFrame:CreateFontString(newFrame:GetName().."Title","ARTWORK");
-	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",12);
+	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",11);
 	newFrame.title:SetTextColor(1.0,0.8,0,1);
 	newFrame.title:SetText("Sell");
 	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",-2,-8);
@@ -243,7 +243,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	newFrame.command = UnBotExecuteCommand[67];
 	newFrame.afterRemove = true;
 	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, "Sell item");
-	newFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", -50, -36 * 4);
+	newFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", -52, -29 * 4 + 29);
 	table.insert(fromParent.optionsType, newFrame);
 	if (checkedIndex == 4) then
 		BagsTypeOptionsClick(newFrame, fromParent, newFrame.afterRemove);
@@ -251,10 +251,10 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	
 	newFrame = CreateFrame("CheckButton",fromParent:GetName().."BagsType5",fromParent,"UnBotBagsTypeTemplate");
 	newFrame.title = newFrame:CreateFontString(newFrame:GetName().."Title","ARTWORK");
-	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",12);
+	newFrame.title:SetFont("Fonts\\FRIZQT__.TTF",11);
 	newFrame.title:SetTextColor(1.0,0.8,0,1);
 	newFrame.title:SetText("Use");
-	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",-2,-8);
+	newFrame.title:SetPoint("TOPLEFT",newFrame,"TOPRIGHT",-2,-9);
 	newFrame.title:SetShadowColor(0,0,0);
 	newFrame.title:SetShadowOffset(1,-1);
 	newFrame:Show();
@@ -262,7 +262,7 @@ local function CreateBagsTypeOptions(fromParent, checkedIndex)
 	newFrame.command = UnBotExecuteCommand[68];
 	newFrame.afterRemove = true;
 	newFrame.parentFrameText = UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, "Use item");
-	newFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", -50, -36 * 5);
+	newFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", -52, -29 * 5 + 37);
 	table.insert(fromParent.optionsType, newFrame);
 	if (checkedIndex == 5) then
 		BagsTypeOptionsClick(newFrame, fromParent, newFrame.afterRemove);
@@ -288,18 +288,18 @@ local function CreateOptionByParent(fromParent,flushFunc)
 	end
 
 	fromParent.title = fromParent:CreateFontString(fromParent:GetName().."Title","ARTWORK");
-	fromParent.title:SetFont("Fonts\\FRIZQT__.TTF",14);
+	fromParent.title:SetFont("Fonts\\FRIZQT__.TTF",12);
 	fromParent.title:SetTextColor(1.0,1.0,1.0,1);
 	fromParent.title:SetText(UnBotBagsHeadFrameSetFontText(fromParent.raceName, fromParent.target, fromParent.activeText));
-	fromParent.title:SetPoint("TOPLEFT",fromParent,"TOPLEFT",10,-8);
+	fromParent.title:SetPoint("TOPLEFT",fromParent,"TOPLEFT",6,-6);
 	fromParent.title:SetShadowColor(0,0,0);
 	fromParent.title:SetShadowOffset(1,-1);
 
 	fromParent.page = fromParent:CreateFontString(fromParent:GetName().."Page","ARTWORK");
-	fromParent.page:SetFont("Fonts\\FRIZQT__.TTF",12);
+	fromParent.page:SetFont("Fonts\\FRIZQT__.TTF",11);
 	fromParent.page:SetTextColor(1.0,1.0,1.0,1);
 	fromParent.page:SetText("0-0");
-	fromParent.page:SetPoint("CENTER",fromParent,"BOTTOMLEFT",90,22);
+	fromParent.page:SetPoint("CENTER",fromParent,"BOTTOMLEFT",82,18);
 	fromParent.page:SetShadowColor(0,0,0);
 	fromParent.page:SetShadowOffset(1,-1);
 
@@ -311,9 +311,10 @@ local function CreateOptionByParent(fromParent,flushFunc)
 	newFrame:SetPushedTexture([[Interface\BUTTONS\UI-SpellbookIcon-PrevPage-Down]]);
 	newFrame:SetHighlightTexture([[Interface\Buttons\UI-Common-MouseHilight]],"ADD");
 	newFrame:Show();
-	newFrame:SetPoint("BOTTOMLEFT", fromParent, "BOTTOMLEFT", 10, 6);
+	newFrame:SetPoint("BOTTOMLEFT", fromParent, "BOTTOMLEFT", 4, 3);
 	newFrame.parentFrame = fromParent;
 	newFrame:SetScript("OnClick", function() PickPrevOrNextButton(fromParent,true) end);
+	newFrame:SetSize(28, 28)
 
 	newFrame = CreateFrame("Button","BGIconsFrame",fromParent,"UnBotBagsButtonTemplate");
 	newFrame.Icon = newFrame:CreateTexture("BGIcons","BACKGROUND");
@@ -323,16 +324,17 @@ local function CreateOptionByParent(fromParent,flushFunc)
 	newFrame:SetPushedTexture([[Interface\BUTTONS\UI-SpellbookIcon-NextPage-Down]]);
 	newFrame:SetHighlightTexture([[Interface\Buttons\UI-Common-MouseHilight]],"ADD");
 	newFrame:Show();
-	newFrame:SetPoint("BOTTOMLEFT", fromParent, "BOTTOMLEFT", 140, 6);
+	newFrame:SetPoint("BOTTOMLEFT", fromParent, "BOTTOMLEFT", 134, 3);
 	newFrame.parentFrame = fromParent;
 	newFrame:SetScript("OnClick", function() PickPrevOrNextButton(fromParent,false) end);
+	newFrame:SetSize(28, 28)
 
 	newFrame = CreateFrame("Button","BagsFrameFlush"..fromParent:GetName(),fromParent,"UIPanelButtonTemplate");
 	newFrame:SetText("Refresh");
-	newFrame:SetWidth(60);
-	newFrame:SetHeight(26);
+	newFrame:SetWidth(56);
+	newFrame:SetHeight(24);
 	newFrame:Show();
-	newFrame:SetPoint("BOTTOMLEFT", fromParent, "BOTTOMLEFT", 180, 9);
+	newFrame:SetPoint("BOTTOMLEFT", fromParent, "BOTTOMLEFT", 188, 6);
 	newFrame:SetScript("OnClick", function()
 		if (flushFunc ~= nil) then
 			flushFunc(fromParent,fromParent.command);
@@ -341,10 +343,10 @@ local function CreateOptionByParent(fromParent,flushFunc)
 	end);
 
 	local closeFrame = CreateFrame("Button","BGIconsFrame",fromParent,"UIPanelCloseButton");
-	closeFrame:SetWidth(40);
-	closeFrame:SetHeight(40);
+	closeFrame:SetWidth(32);
+	closeFrame:SetHeight(32);
 	closeFrame:Show();
-	closeFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", 5, 5);
+	closeFrame:SetPoint("TOPRIGHT", fromParent, "TOPRIGHT", 3, 3);
 	closeFrame:SetScript("OnClick", function()
 		RemoveFromUnBotFrame(fromParent)
 		fromParent:Hide()
@@ -383,11 +385,11 @@ function CreateIconsByUnBotBagsFrame(checkedIndex, name,bagType,afterRemove,data
 	local bagsHead = CreateFrame("Frame",bagsFrame:GetName().."Head",bagsFrame,"UnBotBagsFrameHeadFrame");
 	bagsHead:Show();
 	if (bagType == 1) then
-		bagsFrame:SetSize(330, 220);
-		bagsHead:SetSize(330, 32);
+		bagsFrame:SetSize(330, 208);
+		bagsHead:SetSize(330, 26);
 	else
-		bagsFrame:SetSize(250, 220);
-		bagsHead:SetSize(250, 32);
+		bagsFrame:SetSize(250, 208);
+		bagsHead:SetSize(250, 26);
 	end
 	bagsFrame.bagsType = bagType;
 	bagsFrame.bgIconsGroup = CreateIconGroupByParent(bagsFrame,5,32,8,5,0,0,30);
@@ -415,6 +417,9 @@ function CreateIconsByUnBotBagsFrame(checkedIndex, name,bagType,afterRemove,data
 		bagsFrame.flushFunc(bagsFrame,command);
 		UnBotDisableAllFrameFlushButton();
 	end
+
+	bagsFrame:SetScale(UnBotScaleConfig);
+
 	return bagsFrame;
 end
 

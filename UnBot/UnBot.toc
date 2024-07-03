@@ -8,7 +8,7 @@
 ## Dependencies: YssBossLoot
 ## Version: 0.4
 ## Author: GPD
-## SavedVariables: UnBotCommandBarConfig, UnBotLogInfo
+## SavedVariables: UnBotCommandBarConfig, UnBotLogInfo, UnBotScaleConfig
 Bindings.lua
 UnBotTemplate.xml
 UnBotBagsTemplate.xml

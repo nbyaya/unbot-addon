@@ -2,7 +2,7 @@
 ..\FrameXML\UI.xsd">
   <Button name="MemberBarTemplate" virtual="true">
 	<Size>
-	  <AbsDimension x="375" y="20" />
+	  <AbsDimension x="250" y="10" />
 	</Size>
 	<Anchors>
 	  <Anchor point="TOPLEFT">
@@ -11,8 +11,8 @@
 		</Offset>
 	  </Anchor>
 	</Anchors>
-	<NormalTexture file="interface\buttons\UI-Common-MouseHilight" alphaMode="ADD">
-	  <TexCoords left="0" right="1" top="0" bottom="1" />
+	<NormalTexture file="interface\buttons\ui-listbox-highlight" alphaMode="ADD">
+	  <TexCoords left="0" right="0" top="0" bottom="0" />
 	</NormalTexture>
 	<PushedTexture file="interface\buttons\greengrad64" alphaMode="ADD">
 	  <TexCoords left="0" right="1" top="0" bottom="1" />
@@ -22,7 +22,7 @@
 	</HighlightTexture>
 	<ButtonText name="$parentText">
 	  <FontHeight>
-		<AbsValue val="14" />
+		<AbsValue val="10" />
 	  </FontHeight>
 	</ButtonText>
 	<NormalFont style="GameFontNormal" />
@@ -49,7 +49,7 @@
   </Button>
   <CheckButton name="OptionsTypeTemplate" checked="false" virtual="true">
 	<Size>
-	  <AbsDimension x="48" y="48" />
+	  <AbsDimension x="18" y="18" />
 	</Size>
 	<NormalTexture file="Interface\Buttons\UI-CheckBox-Up" />
 	<PushedTexture file="Interface\Buttons\UI-CheckBox-Down" />
@@ -68,7 +68,7 @@
   <Frame name="OnlineFrame" movable="true" enableMouse="true" toplevel="true" frameStrata="LOW" hidden="true">
 	<TitleRegion setAllPoints="true"/>
     <Size>
-      <AbsDimension x="610" y="470" />
+      <AbsDimension x="490" y="237" />
     </Size>
     <Anchors>
       <Anchor point="CENTER" relativeTo="UIParent" relativePoint="CENTER">
@@ -79,43 +79,43 @@
     </Anchors>
     <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
       <BackgroundInsets>
-        <AbsInset left="11" right="12" top="12" bottom="11" />
+        <AbsInset left="4" right="4" top="4" bottom="4" />
       </BackgroundInsets>
       <TileSize>
-        <AbsValue val="32" />
+        <AbsValue val="12" />
       </TileSize>
       <EdgeSize>
-        <AbsValue val="32" />
+        <AbsValue val="12" />
       </EdgeSize>
     </Backdrop>
     <Layers>
       <Layer>
         <Texture name="$parentTitleBorder" file="Interface\DialogFrame\UI-DialogBox-Header">
           <Size>
-            <AbsDimension x="160" y="48" />
+            <AbsDimension x="105" y="32" />
           </Size>
           <Anchors>
             <Anchor point="TOP">
               <Offset>
-                <AbsDimension x="0" y="18" />
+                <AbsDimension x="0" y="15" />
               </Offset>
             </Anchor>
           </Anchors>
           <TexCoords left="0.2" right="0.8" top="0" bottom="0.6" />
         </Texture>
-        <FontString name="$parentTitleString" font="Fonts\FRIZQT__.TTF" text="Select bot to bring online"> <!-- Needs correction -->
+        <FontString name="$parentTitleString" font="Fonts\FRIZQT__.TTF" text="Manage Bots">
           <Size>
             <AbsDimension x="140" y="0" />
           </Size>
           <Anchors>
             <Anchor point="TOP">
               <Offset>
-                <AbsDimension x="0" y="2" />
+                <AbsDimension x="0" y="3" />
               </Offset>
             </Anchor>
           </Anchors>
           <FontHeight>
-            <AbsValue val="18" />
+            <AbsValue val="10" />
           </FontHeight>
           <Color r="1" g="0" b="0" />
           <Shadow>
@@ -141,12 +141,12 @@
     <Frames>
       <Button name="$parentClose" inherits="UIPanelCloseButton">
         <Size>
-          <AbsDimension x="64" y="64" />
+          <AbsDimension x="22" y="22" />
         </Size>
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="562" y="24" />
+              <AbsDimension x="466" y="-2" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -156,12 +156,12 @@
       </Button>
       <Frame name="$parentHelpLabel">
         <Size>
-          <AbsDimension x="410" y="20" />
+          <AbsDimension x="447" y="20" />
         </Size>
         <Anchors>
-          <Anchor point="TOPLEFT">
+          <Anchor point="TOP">
             <Offset>
-              <AbsDimension x="155" y="-25" />
+              <AbsDimension x="0" y="-15" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -169,11 +169,11 @@
           <Layer>
             <FontString name="$parentLabel" font="Fonts\FRIZQT__.TTF" text="Click the left mouse button to bring the bot online, and right click to invite it to your group"> <!-- Needs correction -->
               <Anchors>
-                <Anchor point="TOPLEFT" />
                 <Anchor point="BOTTOMRIGHT" />
+                <Anchor point="TOPLEFT" />
               </Anchors>
               <FontHeight>
-                <AbsValue val="16" />
+                <AbsValue val="10" />
               </FontHeight>
               <Color r="1" g="0.75" b="0" />
               <Shadow>
@@ -188,12 +188,12 @@
       </Frame>
       <ScrollFrame name="$parentListBox" enableMouse="true" EnableMouseWheel="true">
         <Size>
-          <AbsDimension x="424" y="375" />
+          <AbsDimension x="412" y="173" />
         </Size>
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="165" y="-60" />
+              <AbsDimension x="150" y="-40" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -213,24 +213,24 @@
         <Frames>
           <Slider name="OnlineFrameSlider" minValue="0" maxValue="100" defaultValue="0" valueStep="5">
             <Size>
-              <AbsDimension x="25" y="375" />
+              <AbsDimension x="10" y="174" />
             </Size>
             <Anchors>
               <Anchor point="TOPLEFT">
                 <Offset>
-                  <AbsDimension x="395" y="0" />
+                  <AbsDimension x="320" y="1" />
                 </Offset>
               </Anchor>
             </Anchors>
             <Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
               <BackgroundInsets>
-                <AbsInset left="3" right="3" top="6" bottom="6" />
+                <AbsInset left="1" right="1" top="2" bottom="2" />
               </BackgroundInsets>
               <TileSize>
-                <AbsValue val="8" />
+                <AbsValue val="4" />
               </TileSize>
               <EdgeSize>
-                <AbsValue val="8" />
+                <AbsValue val="4" />
               </EdgeSize>
             </Backdrop>
             <HitRectInsets>
@@ -238,7 +238,7 @@
             </HitRectInsets>
             <ThumbTexture name="$parentThumb" file="interface\buttons\ui-grouploot-de-up">
               <Size>
-                <AbsDimension x="32" y="32" />
+                <AbsDimension x="20" y="20" />
               </Size>
             </ThumbTexture>
 			<Scripts>
@@ -256,7 +256,7 @@
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="19" y="-67" />
+              <AbsDimension x="19" y="-56" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -266,12 +266,12 @@
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
-                    <AbsDimension x="-2" y="0" />
+                    <AbsDimension x="-1" y="0" />
                   </Offset>
                 </Anchor>
               </Anchors>
               <FontHeight>
-                <AbsValue val="15" />
+                <AbsValue val="9" />
               </FontHeight>
               <Color r="1" g="0.8196079" b="0" />
               <Shadow>
@@ -293,7 +293,7 @@
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="19" y="-29" />
+              <AbsDimension x="19" y="-40" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -303,12 +303,12 @@
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
-                    <AbsDimension x="-2" y="0" />
+                    <AbsDimension x="-1" y="0" />
                   </Offset>
                 </Anchor>
               </Anchors>
               <FontHeight>
-                <AbsValue val="15" />
+                <AbsValue val="10" />
               </FontHeight>
               <Color r="1" g="0.8196079" b="0" />
               <Shadow>
@@ -330,7 +330,7 @@
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="19" y="-105" />
+              <AbsDimension x="19" y="-72" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -340,12 +340,12 @@
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
-                    <AbsDimension x="-2" y="0" />
+                    <AbsDimension x="-1" y="0" />
                   </Offset>
                 </Anchor>
               </Anchors>
               <FontHeight>
-                <AbsValue val="15" />
+                <AbsValue val="9" />
               </FontHeight>
               <Color r="1" g="0.8196079" b="0" />
               <Shadow>
@@ -367,7 +367,7 @@
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="19" y="-143" />
+              <AbsDimension x="19" y="-88" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -377,12 +377,12 @@
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
-                    <AbsDimension x="-2" y="0" />
+                    <AbsDimension x="-1" y="0" />
                   </Offset>
                 </Anchor>
               </Anchors>
               <FontHeight>
-                <AbsValue val="15" />
+                <AbsValue val="9" />
               </FontHeight>
               <Color r="1" g="0.8196079" b="0" />
               <Shadow>
@@ -404,7 +404,7 @@
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="19" y="-181" />
+              <AbsDimension x="19" y="-104" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -414,12 +414,12 @@
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
-                    <AbsDimension x="-2" y="0" />
+                    <AbsDimension x="-1" y="0" />
                   </Offset>
                 </Anchor>
               </Anchors>
               <FontHeight>
-                <AbsValue val="15" />
+                <AbsValue val="9" />
               </FontHeight>
               <Color r="1" g="0.8196079" b="0" />
               <Shadow>
@@ -441,7 +441,7 @@
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="19" y="-219" />
+              <AbsDimension x="19" y="-120" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -451,12 +451,12 @@
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
-                    <AbsDimension x="-2" y="0" />
+                    <AbsDimension x="-1" y="0" />
                   </Offset>
                 </Anchor>
               </Anchors>
               <FontHeight>
-                <AbsValue val="15" />
+                <AbsValue val="9" />
               </FontHeight>
               <Color r="1" g="0.8196079" b="0" />
               <Shadow>
@@ -478,7 +478,7 @@
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="19" y="-257" />
+              <AbsDimension x="19" y="-136" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -488,12 +488,12 @@
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
-                    <AbsDimension x="-2" y="0" />
+                    <AbsDimension x="-1" y="0" />
                   </Offset>
                 </Anchor>
               </Anchors>
               <FontHeight>
-                <AbsValue val="15" />
+                <AbsValue val="9" />
               </FontHeight>
               <Color r="1" g="0.8196079" b="0" />
               <Shadow>
@@ -515,7 +515,7 @@
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="19" y="-295" />
+              <AbsDimension x="19" y="-152" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -525,12 +525,12 @@
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
-                    <AbsDimension x="-2" y="0" />
+                    <AbsDimension x="-1" y="0" />
                   </Offset>
                 </Anchor>
               </Anchors>
               <FontHeight>
-                <AbsValue val="15" />
+                <AbsValue val="9" />
               </FontHeight>
               <Color r="1" g="0.8196079" b="0" />
               <Shadow>
@@ -552,7 +552,7 @@
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="19" y="-333" />
+              <AbsDimension x="19" y="-168" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -562,12 +562,12 @@
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
-                    <AbsDimension x="-2" y="0" />
+                    <AbsDimension x="-1" y="0" />
                   </Offset>
                 </Anchor>
               </Anchors>
               <FontHeight>
-                <AbsValue val="15" />
+                <AbsValue val="9" />
               </FontHeight>
               <Color r="1" g="0.8196079" b="0" />
               <Shadow>
@@ -589,7 +589,7 @@
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="19" y="-371" />
+              <AbsDimension x="19" y="-184" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -599,12 +599,12 @@
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
-                    <AbsDimension x="-2" y="0" />
+                    <AbsDimension x="-1" y="0" />
                   </Offset>
                 </Anchor>
               </Anchors>
               <FontHeight>
-                <AbsValue val="15" />
+                <AbsValue val="9" />
               </FontHeight>
               <Color r="1" g="0.8196079" b="0" />
               <Shadow>
@@ -626,7 +626,7 @@
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="19" y="-409" />
+              <AbsDimension x="19" y="-200" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -636,12 +636,12 @@
               <Anchors>
                 <Anchor point="LEFT" relativePoint="RIGHT">
                   <Offset>
-                    <AbsDimension x="-2" y="0" />
+                    <AbsDimension x="-1" y="0" />
                   </Offset>
                 </Anchor>
               </Anchors>
               <FontHeight>
-                <AbsValue val="15" />
+                <AbsValue val="9" />
               </FontHeight>
               <Color r="1" g="0.8196079" b="0" />
               <Shadow>
