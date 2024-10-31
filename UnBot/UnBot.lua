@@ -23,7 +23,7 @@ function UnBotCloseAll()
 	OnlineFrame:Hide();
 	NPCFrame:Hide();
 	UnBotFrame:Hide();
-	DisplayInfomation("Bar is now hidden. Use /unbot to toggle the bar.");
+	DisplayInfomation("关闭机器人动作条，聊天栏输入/unbot重新打开动作条。");
 end
 
 local function AddButton(name,fromParent,temp,gi,ci)
@@ -66,7 +66,7 @@ function InspectFrame_Show(unit)
 		if( IsAddOnLoaded("Blizzard_InspectUI") == nil) then
 			local loaded, reason = LoadAddOn("Blizzard_InspectUI");
 			if( loaded == nil) then
-				DisplayInfomation("Window initialization failed: "..reason);
+				DisplayInfomation("窗口初始化失败："..reason);
 			else
 				DoInspectFrameShow(unit);
 			end
@@ -125,36 +125,36 @@ end
 
 local function GetCommandTypeTextByType(typeIndex)
 	if (typeIndex == 4) then
-		return "Group";
+		return "以队伍全体作为目标";
 	elseif (typeIndex == 3) then
-		return "Hostile";
+		return "需要选择敌对目标";
 	elseif (typeIndex == 2) then
-		return "Friendly";
+		return "需要选择友方目标";
 	else
-		return "None";
+		return "不需要选择目标";
 	end
 end
 
 function CommandButton_OnEnter(self,index,btnType)
 	GameTooltip:SetOwner(self, "ANCHOR_TOPRIGHT");
 	GameTooltip:AddLine(UnBotTooltipTitle[index],1,0,0,1);
-	GameTooltip:AddDoubleLine("Target:",GetCommandTypeTextByType(UnBotCommandType[index]),0,0,1,1,0,1);
+	GameTooltip:AddDoubleLine("目标类型：",GetCommandTypeTextByType(UnBotCommandType[index]),0,0,1,1,0,1);
 	GameTooltip:AddLine(UnBotTooltipHelp[index],0,1,0,1);
 	GameTooltip:AddLine(" ",1,1,1,1);
 	if (self.groupIndex > 0) then
-		GameTooltip:AddDoubleLine("Uses:",UnBotExecuteCommand[index],0,0.85,0.85,0,0.85,0.85);
+		GameTooltip:AddDoubleLine("执行命令：",UnBotExecuteCommand[index],0,0.85,0.85,0,0.85,0.85);
 	end
-	GameTooltip:AddLine("LMB: Use",0.65,0.55,0,1);
+	GameTooltip:AddLine("鼠标左键单击：执行命令",0.65,0.55,0,1);
 	if (self.groupIndex > 0) then
 		if (btnType == 1) then
-			GameTooltip:AddLine("RMB: Toggle button group",0.65,0.55,0,1);
+			GameTooltip:AddLine("鼠标右键单击：切换弹出按钮组",0.65,0.55,0,1);
 		elseif (btnType == 2) then
-			GameTooltip:AddLine("RMB: Set shortcut",0.65,0.55,0,1);
+			GameTooltip:AddLine("鼠标右键单击：应用到快捷按钮",0.65,0.55,0,1);
 		end
 	else
-		GameTooltip:AddLine("RMB: Hide the bar",0.65,0.55,0,1);
+		GameTooltip:AddLine("鼠标右键单击：关闭主动作条",0.65,0.55,0,1);
 	end
-	GameTooltip:AddDoubleLine("ID:",tostring(index),0,0,1,1,0,1);
+	GameTooltip:AddDoubleLine("机器人命令ID",tostring(index),0,0,1,1,0,1);
 	GameTooltip:AddTexture(GetIconPathByIndex(UnBotIconFiles[index]));
 	GameTooltip:Show();
 end
@@ -349,7 +349,7 @@ function SubCommandButton_OnLeftClick(index)
 		end
 	end
 	if (UnBotCommandType[index] == nil) then
-		DisplayInfomation("Could not find order "..tostring(index));
+		DisplayInfomation("没有找到 "..tostring(index));
 		return;
 	end
 	local realize = getglobal("UnBotCommandRealize");
@@ -363,11 +363,11 @@ function SubCommandButton_OnLeftClick(index)
 			local isParty = UnitInParty("target");
 			local isRaid = UnitInRaid("target");
 			if (targetName == nil or targetName == "") then
-				DisplayInfomation("You have no target.");
+				DisplayInfomation("你当前没有选择目标。");
 				return;
 			end
 			if (isParty == nil and isRaid == nil) then
-				DisplayInfomation("The target is not in your group.");
+				DisplayInfomation("选择目标不在你的队伍中。");
 				return;
 			end
 			-- if (not IsRealPartyLeader()) then
@@ -378,7 +378,7 @@ function SubCommandButton_OnLeftClick(index)
 		elseif (UnBotCommandType[index] == 3) then
 			local targetName = UnitName("target");
 			if (targetName == nil or targetName == "") then
-				DisplayInfomation("You have no target.");
+				DisplayInfomation("你当前没有选择目标。");
 				return;
 			end
 			-- if (not IsRealPartyLeader()) then

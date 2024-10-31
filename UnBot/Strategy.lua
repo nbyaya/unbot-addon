@@ -36,7 +36,7 @@ local function CreateStrategyFrame(name)
 	strategyFrame.title = strategyFrame:CreateFontString(strategyFrame:GetName().."Title","ARTWORK");
 	strategyFrame.title:SetFont("Fonts\\FRIZQT__.TTF",13);
 	strategyFrame.title:SetTextColor(1,0,1,1);
-	strategyFrame.title:SetText("Strategy Editor for |cff00ffff"..name.."|r");
+	strategyFrame.title:SetText("|cff00ffff"..name.."|r".."策略编辑器");
 	strategyFrame.title:SetPoint("TOP",strategyFrame,"TOP",0,0);
 	strategyFrame.title:SetShadowColor(0,0,0);
 	strategyFrame.title:SetShadowOffset(1,-1);
@@ -44,7 +44,7 @@ local function CreateStrategyFrame(name)
 	strategyFrame.leftText = strategyFrame:CreateFontString(strategyFrame:GetName().."LeftText","ARTWORK");
 	strategyFrame.leftText:SetFont("Fonts\\FRIZQT__.TTF",13);
 	strategyFrame.leftText:SetTextColor(1,0,0,1);
-	strategyFrame.leftText:SetText("Combat");
+	strategyFrame.leftText:SetText("战斗策略");
 	strategyFrame.leftText:SetPoint("CENTER",strategyFrame,"TOPLEFT",80,-52);
 	strategyFrame.leftText:SetShadowColor(0,0,0);
 	strategyFrame.leftText:SetShadowOffset(1,-1);
@@ -52,7 +52,7 @@ local function CreateStrategyFrame(name)
 	strategyFrame.rightText = strategyFrame:CreateFontString(strategyFrame:GetName().."RightText","ARTWORK");
 	strategyFrame.rightText:SetFont("Fonts\\FRIZQT__.TTF",13);
 	strategyFrame.rightText:SetTextColor(0,1,0,1);
-	strategyFrame.rightText:SetText("Non-combat");
+	strategyFrame.rightText:SetText("非战斗策略");
 	strategyFrame.rightText:SetPoint("CENTER",strategyFrame,"TOPRIGHT",-85,-52);
 	strategyFrame.rightText:SetShadowColor(0,0,0);
 	strategyFrame.rightText:SetShadowOffset(1,-1);
@@ -225,18 +225,18 @@ function StrategyOption_OnEnter(btn, name, use, strategyType, data)
 	GameTooltip:SetOwner(btn, "ANCHOR_TOPRIGHT");
 	GameTooltip:AddLine(data[2],1,1,1,1);
 	if (use) then
-		GameTooltip:AddLine("Active",0,0,1,1);
+		GameTooltip:AddLine("已激活",0,0,1,1);
 	else
-		GameTooltip:AddLine("Inactive",1,0,0,1);
+		GameTooltip:AddLine("未激活",1,0,0,1);
 	end
 	GameTooltip:AddLine(data[3],0,1,0,1);
-	GameTooltip:AddLine("Some strategies are ineffective for certain classes and some are mutually exclusive.",1,0.5,0,1);
+	GameTooltip:AddLine("有些策略对某些职业无效，即使激活了这些策略，也会被机器人拒绝掉，并且某些策略是相互排斥的。",1,0.5,0,1);
 	GameTooltip:AddLine(" ",1,1,1,1);
-	GameTooltip:AddDoubleLine("Uses:",data[1],0,0.85,0.85,0,0.85,0.85);
+	GameTooltip:AddDoubleLine("执行命令：",data[1],0,0.85,0.85,0,0.85,0.85);
 	if (use) then
-		GameTooltip:AddLine("LMB: Deactivate",0.65,0.55,0,1);
+		GameTooltip:AddLine("鼠标单击：取消该策略",0.65,0.55,0,1);
 	else
-		GameTooltip:AddLine("LMB: Activate",0.65,0.55,0,1);
+		GameTooltip:AddLine("鼠标单击：激活该策略",0.65,0.55,0,1);
 	end
 	GameTooltip:Show();
 end

@@ -48,7 +48,7 @@ function UnBotShowOnlineFrame()
 	if (OnlineFrame.scrollFrame == nil) then
 		OnlineFrame.scrollFrame = _G["OnlineFrameListBox"];
 		if (OnlineFrame.scrollFrame == nil) then
-			DisplayInfomation("Failed to open the Online window.");
+			DisplayInfomation("打开Online窗口失败。");
 			return;
 		end
 	end
